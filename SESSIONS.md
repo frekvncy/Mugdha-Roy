@@ -23,13 +23,15 @@ This file tracks chronological development sessions, architectural decisions, an
    - Changed `.tech-only` / `.event-only` active visibility rule from `display: initial` (which set `<blockquote class="event-quote event-only">` to `display: inline`, splitting the `<blockquote>` into two empty floating blocks around the `<p>` and `<div>`) to `display: block`.
    - Added `overflow: hidden` and aligned top margin (`16px`) on `.event-quote` for a clean, unified quote card.
 6. **Social Share Image & Favicons ([`index.html`](index.html))**:
-   - Added a square 1200×1200 [`og-image.png`](og-image.png) (“Two modes. One me.” with the hero orb and HCLTech / frekvncy pills) and wired `og:type`, `og:image` (+ type, width, height, alt), `twitter:card=summary`, and `twitter:image`.
+   - Added a square 1200×1200 [`og-image.jpg`](og-image.jpg) (“Two modes. One me.” with the hero orb and HCLTech / frekvncy pills) and wired `og:type`, `og:image` (+ type, width, height, alt), `twitter:card=summary`, and `twitter:image`.
    - Added an `MR` logo-mark favicon set: [`favicon.ico`](favicon.ico) (16/32/48), [`favicon-32.png`](favicon-32.png), and a full-bleed 180×180 [`apple-touch-icon.png`](apple-touch-icon.png).
-   - `og:image` is relative for now; switch it to an absolute URL once the site is deployed.
+7. **OG Image Fix ([`index.html`](index.html))**:
+   - The OG image did not show in link previews because `og:image` was a relative path. Switched `og:image`, `og:image:secure_url`, and `twitter:image` to absolute URLs on `https://frekvncy.github.io/Mugdha-Roy/`, and added `og:url`, `twitter:title`, `twitter:description`, and `<link rel="canonical">`.
+   - Replaced the 405 KB `og-image.png` with an 80 KB [`og-image.jpg`](og-image.jpg) so WhatsApp will show it.
 
 ### Files Touched
 - [`index.html`](index.html)
-- [`og-image.png`](og-image.png), [`favicon.ico`](favicon.ico), [`favicon-32.png`](favicon-32.png), [`apple-touch-icon.png`](apple-touch-icon.png)
+- [`og-image.jpg`](og-image.jpg), [`favicon.ico`](favicon.ico), [`favicon-32.png`](favicon-32.png), [`apple-touch-icon.png`](apple-touch-icon.png)
 - [`GEMINI.md`](GEMINI.md)
 - [`README.md`](README.md)
 - [`SESSIONS.md`](SESSIONS.md)

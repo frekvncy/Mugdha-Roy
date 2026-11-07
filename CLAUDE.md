@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Personal portfolio for Mugdha Roy: one static page with two "modes" — **Tech Analyst** (HCLTech, default, `#tech`) and **Event Organizer** (frekvncy, Lucknow, `#events`). Everything (HTML, CSS, JS) lives in `index.html`. No build step, no package manager, no dependencies beyond Google Fonts (Space Grotesk, DM Sans). There are no tests or linters. Static assets at the root: a square 1200×1200 `og-image.png` (referenced by a relative URL until the site has a deployed domain, since most scrapers need an absolute one) and a favicon set (`favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`).
+Personal portfolio for Mugdha Roy: one static page with two "modes" — **Tech Analyst** (HCLTech, default, `#tech`) and **Event Organizer** (frekvncy, Lucknow, `#events`). Everything (HTML, CSS, JS) lives in `index.html`. No build step, no package manager, no dependencies beyond Google Fonts (Space Grotesk, DM Sans). There are no tests or linters. Static assets at the root: a square 1200×1200 `og-image.jpg` (kept under ~300 KB for WhatsApp) and a favicon set (`favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`).
+
+The site is deployed to GitHub Pages at https://frekvncy.github.io/Mugdha-Roy/ (via a GitHub Actions workflow on push to `main`). `og:url`, `og:image`, `twitter:image` and `canonical` must be absolute URLs on that domain, because social scrapers ignore relative image paths.
 
 ## Preview
 

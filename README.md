@@ -40,7 +40,7 @@ Mugdha-Roy/
 │       └── update-project-docs/
 │           └── SKILL.md     # Agent skill to sync SESSIONS.md, GEMINI.md, and README.md
 ├── index.html               # Single-file portfolio application (HTML + CSS + JS)
-├── og-image.png             # Square 1200×1200 social share (Open Graph) image
+├── og-image.jpg             # Square 1200×1200 social share (Open Graph) image
 ├── favicon.ico              # Multi-size favicon (16/32/48)
 ├── favicon-32.png           # 32×32 PNG favicon
 ├── apple-touch-icon.png     # 180×180 iOS home-screen icon
