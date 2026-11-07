@@ -26,6 +26,7 @@ Rather than splitting two distinct sides into separate profiles, this portfolio 
 - **Dynamic Theme & Visuals**: Smooth CSS custom property transitions (`--bg`, `--surface`, `--accent`, `--glow`) paired with a floating radial-gradient orb and rotating glassmorphic status badges.
 - **Responsive Across Devices**: Fluid typography using `clamp()`, adaptive CSS Grid layouts at `900px` and `650px` breakpoints, and first-class mobile ergonomics.
 - **Accessible by Default**: Semantic HTML5 landmarks, `aria-pressed` toggle states, dynamic `aria-label` updates, high-visibility `:focus-visible` outlines, and full `@media (prefers-reduced-motion: reduce)` support.
+- **Social Sharing & Favicons**: Square 1200×1200 Open Graph image with `og:*` and `twitter:*` meta tags, plus an `MR` logo-mark favicon set (`.ico`, 32px PNG, Apple touch icon).
 - **Zero Dependencies**: Built with pure HTML5, modern CSS3, and vanilla JavaScript in a single self-contained [`index.html`](index.html) file.
 
 ---
@@ -39,6 +40,10 @@ Mugdha-Roy/
 │       └── update-project-docs/
 │           └── SKILL.md     # Agent skill to sync SESSIONS.md, GEMINI.md, and README.md
 ├── index.html               # Single-file portfolio application (HTML + CSS + JS)
+├── og-image.png             # Square 1200×1200 social share (Open Graph) image
+├── favicon.ico              # Multi-size favicon (16/32/48)
+├── favicon-32.png           # 32×32 PNG favicon
+├── apple-touch-icon.png     # 180×180 iOS home-screen icon
 ├── GEMINI.md                # Workspace rules, design tokens, and architecture guide
 ├── README.md                # Project overview and usage documentation
 ├── SESSIONS.md              # Chronological log of development sessions and changes

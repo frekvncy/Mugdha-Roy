@@ -11,6 +11,8 @@ The site is built as a lightweight, zero-dependency, single-file static web appl
 - [`SESSIONS.md`](SESSIONS.md): Chronological development session log tracking changes and decisions across sessions.
 - [`GEMINI.md`](GEMINI.md): Workspace architecture, design tokens, and development guidelines.
 - [`.agents/skills/update-project-docs/SKILL.md`](.agents/skills/update-project-docs/SKILL.md): Workspace skill for synchronizing `SESSIONS.md`, `GEMINI.md`, and `README.md`.
+- [`og-image.png`](og-image.png): Square 1200×1200 Open Graph / social share image (`og:image`, `twitter:image` with `twitter:card=summary`).
+- [`favicon.ico`](favicon.ico) (16/32/48), [`favicon-32.png`](favicon-32.png), [`apple-touch-icon.png`](apple-touch-icon.png) (180×180, full-bleed): Favicons based on the rotated `MR` logo mark on `#1b1020` with `#ff83c9` accent.
 - [`LICENSE`](LICENSE): The Unlicense (public domain).
 
 ---
@@ -84,5 +86,8 @@ Loaded from Google Fonts:
    - Always include `target="_blank" rel="noopener noreferrer"` on external links (LinkedIn, frekvncy / Diwali Bash).
 5. **Local Preview**:
    - Open [`index.html`](index.html) directly in any browser or serve the directory with a local static server (e.g., `npx serve .` or `python -m http.server`).
-6. **Documentation & Session Sync**:
+6. **Social Image & Favicons**:
+   - `og:image` / `twitter:image` use a relative path (`og-image.png`). Most scrapers (Facebook, LinkedIn, WhatsApp, X) require an absolute URL, so switch these to the full deployed URL once the site has a public domain.
+   - Keep the OG image square (1200×1200) and `twitter:card` as `summary`; `summary_large_image` would crop a square image to 2:1.
+7. **Documentation & Session Sync**:
    - Whenever features, styles, copy, or project structure change, use the [`update-project-docs`](.agents/skills/update-project-docs/SKILL.md) skill to update [`SESSIONS.md`](SESSIONS.md), [`GEMINI.md`](GEMINI.md), and [`README.md`](README.md).
