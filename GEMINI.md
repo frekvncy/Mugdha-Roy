@@ -5,6 +5,14 @@ This repository contains the personal portfolio website for **Mugdha Roy** ("Two
 
 The site is built as a lightweight, zero-dependency, single-file static web application ([`index.html`](index.html)) with embedded CSS and vanilla JavaScript.
 
+### Repository Files
+- [`index.html`](index.html): Single-file portfolio web application (semantic HTML5, embedded CSS3, vanilla JS).
+- [`README.md`](README.md): Public project overview, feature highlights, directory structure, and local preview instructions.
+- [`SESSIONS.md`](SESSIONS.md): Chronological development session log tracking changes and decisions across sessions.
+- [`GEMINI.md`](GEMINI.md): Workspace architecture, design tokens, and development guidelines.
+- [`.agents/skills/update-project-docs/SKILL.md`](.agents/skills/update-project-docs/SKILL.md): Workspace skill for synchronizing `SESSIONS.md`, `GEMINI.md`, and `README.md`.
+- [`LICENSE`](LICENSE): The Unlicense (public domain).
+
 ---
 
 ## Architecture & Key Patterns
@@ -25,7 +33,7 @@ The core interactive concept of the portfolio is switching between two personas 
 
 #### How Mode Switching Works:
 1. **CSS Visibility Toggles**:
-   - Elements with `.tech-only` or `.event-only` are hidden by default (`display: none`) and revealed via `body[data-mode="tech"] .tech-only` and `body[data-mode="events"] .event-only`.
+   - Elements with `.tech-only` or `.event-only` are hidden by default (`display: none`) and revealed as block elements (`display: block`) via `body[data-mode="tech"] .tech-only` and `body[data-mode="events"] .event-only`.
    - Grid containers (`.cards`, `.lineup`) explicitly restore `display: grid` when their matching mode is active.
 2. **JavaScript Content Map (`content` object)**:
    - Dynamic text nodes (hero eyebrow, title lines, subhead, orbit labels, section headings, and contact box copy/links) are updated via `setMode(mode, updateHash)`.
@@ -76,3 +84,5 @@ Loaded from Google Fonts:
    - Always include `target="_blank" rel="noopener noreferrer"` on external links (LinkedIn, frekvncy / Diwali Bash).
 5. **Local Preview**:
    - Open [`index.html`](index.html) directly in any browser or serve the directory with a local static server (e.g., `npx serve .` or `python -m http.server`).
+6. **Documentation & Session Sync**:
+   - Whenever features, styles, copy, or project structure change, use the [`update-project-docs`](.agents/skills/update-project-docs/SKILL.md) skill to update [`SESSIONS.md`](SESSIONS.md), [`GEMINI.md`](GEMINI.md), and [`README.md`](README.md).
